@@ -1,49 +1,27 @@
-dialog {
+#calculator {
   position: absolute;
   top: 1em;
-  border: none;
-  padding: 0;
-  margin: auto;
+  left: 50%;
+  transform: translate(-50%, 0%);
   width: 400px;
+  z-index: 100;
 }
 
 @media screen and (max-width: 360px) {
-  dialog {
+  #calculator {
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 100vw;
-    margin: 0;
-    padding: 0;
   }
 }
 
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 1.5em;
-  height: 1.5em;
-  background-color: #7c7c7c;
-  opacity: 0.3;
+#base {
+  background: darkslategray;
+  border: 3px solid black;
+  width: auto;
+  border-radius: 25px;
 }
-.close:hover {
-  opacity: 0.6;
-}
-.close:before,
-.close:after {
-  position: absolute;
-  left: 0.7em;
-  content: ' ';
-  height: 1.5em;
-  width: 2px;
-  background-color: #333;
-}
-.close:before {
-  transform: rotate(45deg);
-}
-.close:after {
-  transform: rotate(-45deg);
-}
-
-.grid-container {
+#grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -55,15 +33,39 @@ dialog {
     'one two three add'
     'opposite zero dot equal';
 }
-
-.base {
-  background: darkslategray;
-  border: 3px solid black;
-  width: auto;
-  border-radius: 25px;
+#keypad {
+  height: calc(200% / 3);
 }
 
-.maindisplay {
+#closeBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #7c7c7c;
+  opacity: 0.3;
+}
+#closeBtn:hover {
+  opacity: 0.6;
+}
+#closeBtn:before,
+#closeBtn:after {
+  position: absolute;
+  left: 0.7em;
+  content: ' ';
+  height: 1.5em;
+  width: 2px;
+  background-color: #333;
+}
+#closeBtn:before {
+  transform: rotate(45deg);
+}
+#closeBtn:after {
+  transform: rotate(-45deg);
+}
+
+#mainDisplay {
   background: lightgrey;
   height: 25vh;
   padding: 5% !important;
@@ -75,15 +77,11 @@ dialog {
   border-radius: 22px 22px 0px 0px;
 }
 
-.subdisplay {
+#subDisplay {
   border-bottom: 1px solid black;
   height: 21%;
   font-size: 1.5rem;
   overflow: auto;
-}
-
-.keypad {
-  height: calc(200% / 3);
 }
 
 .keys {
@@ -109,87 +107,87 @@ dialog {
   color: skyblue;
 }
 
-.clear {
+#clearBtn {
   grid-area: clear;
   color: red !important;
 }
 
-.backspace {
+#backspaceBtn {
   grid-area: backspace;
 }
 
-.mod {
+#modBtn {
   grid-area: mod;
 }
 
-.divide {
+#divideBtn {
   grid-area: divide;
 }
 
-.multiply {
+#multiplyBtn {
   grid-area: multiply;
 }
 
-.substract {
+#substractBtn {
   grid-area: substract;
 }
 
-.add {
+#addBtn {
   grid-area: add;
 }
 
-.equal {
+#equalBtn {
   grid-area: equal;
   color: white !important;
   background-color: orangered !important;
   border-radius: 0px 0px 22px 0px;
 }
 
-.opposite {
+#oppositeBtn {
   grid-area: opposite;
   border-radius: 0px 0px 0px 22px;
 }
 
-.dot {
+#dotBtn {
   grid-area: dot;
 }
 
-.zero {
+#zeroBtn {
   grid-area: zero;
 }
 
-.one {
+#oneBtn {
   grid-area: one;
 }
 
-.two {
+#twoBtn {
   grid-area: two;
 }
 
-.three {
+#threeBtn {
   grid-area: three;
 }
 
-.four {
+#fourBtn {
   grid-area: four;
 }
 
-.five {
+#fiveBtn {
   grid-area: five;
 }
 
-.six {
+#sixBtn {
   grid-area: six;
 }
 
-.seven {
+#sevenBtn {
   grid-area: seven;
 }
 
-.eight {
+#eightBtn {
   grid-area: eight;
 }
 
-.nine {
+#nineBtn {
   grid-area: nine;
 }
